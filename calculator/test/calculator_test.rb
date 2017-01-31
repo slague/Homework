@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require '../lib/calculator'
+require './lib/calculator'
 require 'minitest/pride'
 
 class CalculatorTest < Minitest::Test
@@ -12,7 +12,7 @@ class CalculatorTest < Minitest::Test
   def test_does_it_total
     #do the math when this method is called 
     calculator= Calculator.new
-    assert_nil calculator.total, nil
+    assert_equal calculator.total, 0
   end
   
   def test_does_it_add
